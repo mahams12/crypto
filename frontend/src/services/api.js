@@ -283,3 +283,9 @@ export const newsService = {
     };
   }
 };
+
+// Default export for compatibility
+export default {
+  cryptoService,
+  newsService
+};
