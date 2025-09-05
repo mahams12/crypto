@@ -1,0 +1,135 @@
+/* Price Ticker Component Styles */
+.price-ticker {
+    @apply fixed top-16 left-0 right-0 z-40 bg-dark-900/95 backdrop-blur-lg border-b border-dark-800 py-3 overflow-hidden;
+  }
+  
+  .price-ticker.hidden {
+    @apply transform -translate-y-full;
+  }
+  
+  /* Ticker Container */
+  .ticker-container {
+    @apply relative;
+  }
+  
+  .ticker-track {
+    @apply flex space-x-12 min-w-max;
+    animation: scroll-ticker 60s linear infinite;
+  }
+  
+  /* Ticker Item */
+  .ticker-item {
+    @apply flex items-center space-x-3 min-w-0 hover:bg-dark-800/50 px-3 py-2 rounded-lg transition-colors group cursor-pointer;
+  }
+  
+  .ticker-item:hover {
+    @apply transform scale-105;
+  }
+  
+  /* Coin Icon */
+  .ticker-coin-icon {
+    @apply w-6 h-6 rounded-full flex-shrink-0;
+  }
+  
+  .ticker-coin-icon-fallback {
+    @apply w-6 h-6 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center flex-shrink-0;
+  }
+  
+  /* Coin Info */
+  .ticker-coin-symbol {
+    @apply text-sm font-semibold text-gray-200 group-hover:text-primary-400 transition-colors;
+  }
+  
+  .ticker-coin-price {
+    @apply text-sm font-mono text-gray-300;
+  }
+  
+  /* Price Change */
+  .ticker-price-change {
+    @apply text-xs font-medium;
+  }
+  
+  .ticker-price-change.positive {
+    @apply text-success-500;
+  }
+  
+  .ticker-price-change.negative {
+    @apply text-danger-500;
+  }
+  
+  .ticker-price-change.neutral {
+    @apply text-gray-400;
+  }
+  
+  /* Price Change Icons */
+  .ticker-change-icon {
+    @apply w-3 h-3;
+  }
+  
+  /* Gradient Overlays */
+  .ticker-gradient-left {
+    @apply absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-dark-900 to-transparent pointer-events-none;
+  }
+  
+  .ticker-gradient-right {
+    @apply absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-dark-900 to-transparent pointer-events-none;
+  }
+  
+  /* Loading State */
+  .ticker-loading {
+    @apply flex animate-pulse space-x-8;
+  }
+  
+  .ticker-loading-item {
+    @apply flex items-center space-x-3 min-w-0;
+  }
+  
+  .ticker-loading-icon {
+    @apply w-6 h-6 bg-dark-700 rounded-full;
+  }
+  
+  .ticker-loading-text {
+    @apply space-y-1;
+  }
+  
+  .ticker-loading-symbol {
+    @apply w-16 h-3 bg-dark-700 rounded;
+  }
+  
+  .ticker-loading-price {
+    @apply w-12 h-2 bg-dark-700 rounded;
+  }
+  
+  /* Animations */
+  @keyframes scroll-ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Pause animation on hover */
+  .ticker-track:hover {
+    animation-play-state: paused;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .ticker-track {
+      @apply space-x-8;
+    }
+    
+    .ticker-item {
+      @apply px-2 py-1;
+    }
+    
+    .ticker-coin-symbol {
+      @apply text-xs;
+    }
+    
+    .ticker-coin-price {
+      @apply text-xs;
+    }
+  }

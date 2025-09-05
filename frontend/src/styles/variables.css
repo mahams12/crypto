@@ -1,0 +1,319 @@
+/* CSS Custom Properties (Variables) */
+
+:root {
+    /* Font Families */
+    --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    --font-family-mono: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Source Code Pro', monospace;
+  
+    /* Colors - Dark Theme (Primary) */
+    --color-primary: #3b82f6;
+    --color-primary-hover: #2563eb;
+    --color-primary-light: #1e40af20;
+    --color-primary-shadow: #3b82f620;
+  
+    --color-success: #22c55e;
+    --color-success-hover: #16a34a;
+    --color-success-light: #22c55e20;
+  
+    --color-danger: #ef4444;
+    --color-danger-hover: #dc2626;
+    --color-danger-light: #ef444420;
+  
+    --color-warning: #f59e0b;
+    --color-warning-hover: #d97706;
+    --color-warning-light: #f59e0b20;
+  
+    --color-info: #06b6d4;
+    --color-info-hover: #0891b2;
+    --color-info-light: #06b6d420;
+  
+    /* Background Colors */
+    --color-background: #0f172a;
+    --color-background-secondary: #1e293b;
+    --color-card-background: #1e293b;
+    --color-input-background: #334155;
+    --color-secondary: #334155;
+    --color-secondary-hover: #475569;
+  
+    /* Text Colors */
+    --color-text-primary: #e2e8f0;
+    --color-text-secondary: #94a3b8;
+    --color-text-muted: #64748b;
+    --color-text-placeholder: #94a3b8;
+  
+    /* Border Colors */
+    --color-border: #334155;
+    --color-border-hover: #475569;
+    --color-border-light: #64748b;
+  
+    /* Scrollbar Colors */
+    --color-scrollbar-track: #1e293b;
+    --color-scrollbar-thumb: #475569;
+    --color-scrollbar-thumb-hover: #64748b;
+  
+    /* Skeleton Loading */
+    --color-skeleton-base: #1e293b;
+    --color-skeleton-highlight: #334155;
+  
+    /* Glass Morphism */
+    --color-glass-background: rgba(15, 23, 42, 0.8);
+    --color-glass-border: rgba(148, 163, 184, 0.1);
+  
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    --gradient-success: linear-gradient(135deg, #22c55e, #16a34a);
+    --gradient-danger: linear-gradient(135deg, #ef4444, #dc2626);
+    --gradient-warning: linear-gradient(135deg, #f59e0b, #d97706);
+    --gradient-background: linear-gradient(135deg, #0f172a, #1e293b);
+  
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-card-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(59, 130, 246, 0.1);
+  
+    /* Z-Index Scale */
+    --z-index-dropdown: 1000;
+    --z-index-sticky: 1020;
+    --z-index-fixed: 1030;
+    --z-index-modal-backdrop: 1040;
+    --z-index-modal: 1050;
+    --z-index-popover: 1060;
+    --z-index-tooltip: 1070;
+    --z-index-toast: 1080;
+  
+    /* Spacing Scale */
+    --spacing-xs: 0.25rem;   /* 4px */
+    --spacing-sm: 0.5rem;    /* 8px */
+    --spacing-md: 1rem;      /* 16px */
+    --spacing-lg: 1.5rem;    /* 24px */
+    --spacing-xl: 2rem;      /* 32px */
+    --spacing-2xl: 3rem;     /* 48px */
+    --spacing-3xl: 4rem;     /* 64px */
+  
+    /* Border Radius */
+    --radius-sm: 0.25rem;    /* 4px */
+    --radius-md: 0.5rem;     /* 8px */
+    --radius-lg: 0.75rem;    /* 12px */
+    --radius-xl: 1rem;       /* 16px */
+    --radius-full: 9999px;
+  
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --transition-colors: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    --transition-transform: transform 0.15s ease;
+    --transition-all: all 0.15s ease;
+  
+    /* Container Max Widths */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    --container-2xl: 1536px;
+    --container-max: 1400px;
+  
+    /* Breakpoints */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+  
+    /* Typography Scale */
+    --text-xs: 0.75rem;      /* 12px */
+    --text-sm: 0.875rem;     /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-lg: 1.125rem;     /* 18px */
+    --text-xl: 1.25rem;      /* 20px */
+    --text-2xl: 1.5rem;      /* 24px */
+    --text-3xl: 1.875rem;    /* 30px */
+    --text-4xl: 2.25rem;     /* 36px */
+    --text-5xl: 3rem;        /* 48px */
+    --text-6xl: 3.75rem;     /* 60px */
+  
+    /* Line Heights */
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+  
+    /* Font Weights */
+    --font-thin: 100;
+    --font-light: 300;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    --font-black: 900;
+  
+    /* Animation Durations */
+    --duration-75: 75ms;
+    --duration-100: 100ms;
+    --duration-150: 150ms;
+    --duration-200: 200ms;
+    --duration-300: 300ms;
+    --duration-500: 500ms;
+    --duration-700: 700ms;
+    --duration-1000: 1000ms;
+  
+    /* Animation Easing */
+    --ease-linear: linear;
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+    /* Cryptocurrency Specific Colors */
+    --color-crypto-bitcoin: #f7931a;
+    --color-crypto-ethereum: #627eea;
+    --color-crypto-binance: #f3ba2f;
+    --color-crypto-cardano: #0033ad;
+    --color-crypto-solana: #9945ff;
+    --color-crypto-ripple: #23292f;
+    --color-crypto-polkadot: #e6007a;
+    --color-crypto-dogecoin: #c2a633;
+    --color-crypto-avalanche: #e84142;
+    --color-crypto-polygon: #8247e5;
+  
+    /* Component Specific Variables */
+    --header-height: 4rem;
+    --ticker-height: 3rem;
+    --sidebar-width: 16rem;
+    --mobile-menu-width: 20rem;
+    
+    /* Chart Colors */
+    --chart-grid-color: #374151;
+    --chart-axis-color: #6b7280;
+    --chart-tooltip-bg: #1f2937;
+    --chart-tooltip-border: #374151;
+  
+    /* Table Colors */
+    --table-header-bg: #1e293b;
+    --table-row-hover: #334155;
+    --table-border: #374151;
+  
+    /* Form Colors */
+    --form-focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    --form-error-color: #ef4444;
+    --form-success-color: #22c55e;
+  }
+  
+  /* Light Theme Override */
+  [data-theme="light"] {
+    /* Background Colors */
+    --color-background: #ffffff;
+    --color-background-secondary: #f8fafc;
+    --color-card-background: #ffffff;
+    --color-input-background: #f1f5f9;
+    --color-secondary: #f1f5f9;
+    --color-secondary-hover: #e2e8f0;
+  
+    /* Text Colors */
+    --color-text-primary: #1e293b;
+    --color-text-secondary: #64748b;
+    --color-text-muted: #94a3b8;
+    --color-text-placeholder: #94a3b8;
+  
+    /* Border Colors */
+    --color-border: #e2e8f0;
+    --color-border-hover: #cbd5e1;
+    --color-border-light: #f1f5f9;
+  
+    /* Scrollbar Colors */
+    --color-scrollbar-track: #f1f5f9;
+    --color-scrollbar-thumb: #cbd5e1;
+    --color-scrollbar-thumb-hover: #94a3b8;
+  
+    /* Skeleton Loading */
+    --color-skeleton-base: #f1f5f9;
+    --color-skeleton-highlight: #e2e8f0;
+  
+    /* Glass Morphism */
+    --color-glass-background: rgba(255, 255, 255, 0.8);
+    --color-glass-border: rgba(100, 116, 139, 0.1);
+  
+    /* Shadows */
+    --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-card-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(59, 130, 246, 0.1);
+  
+    /* Chart Colors */
+    --chart-grid-color: #e2e8f0;
+    --chart-axis-color: #64748b;
+    --chart-tooltip-bg: #ffffff;
+    --chart-tooltip-border: #e2e8f0;
+  
+    /* Table Colors */
+    --table-header-bg: #f8fafc;
+    --table-row-hover: #f1f5f9;
+    --table-border: #e2e8f0;
+  }
+  
+  /* High Contrast Theme */
+  [data-theme="high-contrast"] {
+    --color-background: #000000;
+    --color-card-background: #1a1a1a;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #cccccc;
+    --color-border: #666666;
+    --color-primary: #00aaff;
+    --color-success: #00ff00;
+    --color-danger: #ff0000;
+    --color-warning: #ffaa00;
+  }
+  
+  /* Print Styles */
+  @media print {
+    :root {
+      --color-background: #ffffff;
+      --color-text-primary: #000000;
+      --color-text-secondary: #333333;
+      --color-border: #cccccc;
+      --shadow-card: none;
+      --shadow-card-hover: none;
+    }
+  }
+  
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --transition-fast: none;
+      --transition-normal: none;
+      --transition-slow: none;
+      --transition-colors: none;
+      --transition-transform: none;
+      --transition-all: none;
+      --duration-75: 0ms;
+      --duration-100: 0ms;
+      --duration-150: 0ms;
+      --duration-200: 0ms;
+      --duration-300: 0ms;
+      --duration-500: 0ms;
+      --duration-700: 0ms;
+      --duration-1000: 0ms;
+    }
+  }
+  
+  /* Custom Properties for Dynamic Theming */
+  :root {
+    /* Dynamic color properties that can be changed via JavaScript */
+    --dynamic-accent: var(--color-primary);
+    --dynamic-accent-hover: var(--color-primary-hover);
+    --dynamic-accent-light: var(--color-primary-light);
+  }
+  
+  /* Utility classes for CSS variables */
+  .var-primary { color: var(--color-primary); }
+  .var-success { color: var(--color-success); }
+  .var-danger { color: var(--color-danger); }
+  .var-warning { color: var(--color-warning); }
+  .var-text-primary { color: var(--color-text-primary); }
+  .var-text-secondary { color: var(--color-text-secondary); }
+  .var-bg-primary { background-color: var(--color-background); }
+  .var-bg-secondary { background-color: var(--color-background-secondary); }
+  .var-bg-card { background-color: var(--color-card-background); }
+  .var-border { border-color: var(--color-border); }

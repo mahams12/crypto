@@ -1,0 +1,297 @@
+/* Charts Component Styles */
+.price-chart-container {
+    @apply w-full;
+  }
+  
+  /* Chart Wrapper */
+  .chart-wrapper {
+    @apply bg-dark-800 rounded-lg overflow-hidden;
+  }
+  
+  .chart-content {
+    @apply p-4;
+  }
+  
+  /* Chart Header */
+  .chart-header {
+    @apply flex items-center justify-between mb-6;
+  }
+  
+  .chart-title {
+    @apply text-xl font-semibold text-gray-100;
+  }
+  
+  /* Timeframe Selector */
+  .timeframe-selector {
+    @apply flex space-x-2;
+  }
+  
+  .timeframe-btn {
+    @apply px-3 py-1 rounded-lg text-sm transition-colors;
+  }
+  
+  .timeframe-btn.active {
+    @apply bg-primary-600 text-white;
+  }
+  
+  .timeframe-btn.inactive {
+    @apply bg-dark-800 text-gray-400 hover:bg-dark-700 hover:text-gray-300;
+  }
+  
+  /* Chart Area */
+  .chart-area {
+    @apply relative;
+  }
+  
+  .chart-responsive-container {
+    @apply w-full;
+  }
+  
+  /* Custom Tooltip */
+  .chart-tooltip {
+    @apply bg-dark-800 border border-dark-700 rounded-lg p-3 shadow-lg;
+  }
+  
+  .chart-tooltip-date {
+    @apply text-sm text-gray-400 mb-1;
+  }
+  
+  .chart-tooltip-price {
+    @apply text-lg font-bold text-gray-100;
+  }
+  
+  .chart-tooltip-volume {
+    @apply text-sm text-gray-400;
+  }
+  
+  /* Chart Loading State */
+  .chart-loading {
+    @apply flex items-center justify-center bg-dark-800 rounded-lg;
+  }
+  
+  .chart-loading-content {
+    @apply text-center;
+  }
+  
+  .chart-loading-spinner {
+    @apply animate-spin rounded-full h-8 w-8 border-b-2 border-primary-500 mx-auto mb-3;
+  }
+  
+  .chart-loading-text {
+    @apply text-gray-400 text-sm;
+  }
+  
+  /* Chart Empty State */
+  .chart-empty {
+    @apply flex items-center justify-center bg-dark-800 rounded-lg;
+  }
+  
+  .chart-empty-content {
+    @apply text-center;
+  }
+  
+  .chart-empty-icon {
+    @apply w-12 h-12 text-gray-500 mx-auto mb-3;
+  }
+  
+  .chart-empty-title {
+    @apply text-gray-400 mb-2;
+  }
+  
+  .chart-empty-description {
+    @apply text-sm text-gray-500;
+  }
+  
+  /* Price Change Indicator */
+  .price-change-indicator {
+    @apply flex items-center justify-center mt-4 text-sm;
+  }
+  
+  .price-change-label {
+    @apply text-gray-400 mr-2;
+  }
+  
+  .price-change-value {
+    @apply font-semibold;
+  }
+  
+  .price-change-value.positive {
+    @apply text-success-500;
+  }
+  
+  .price-change-value.negative {
+    @apply text-danger-500;
+  }
+  
+  .price-change-value.neutral {
+    @apply text-gray-400;
+  }
+  
+  /* Sparkline */
+  .sparkline-container {
+    @apply inline-block;
+  }
+  
+  .sparkline {
+    @apply w-full h-full;
+  }
+  
+  /* Chart Grid */
+  .chart-grid {
+    stroke: #374151;
+    stroke-dasharray: 2,2;
+    opacity: 0.3;
+  }
+  
+  /* Chart Axes */
+  .chart-axis {
+    @apply text-gray-500;
+  }
+  
+  .chart-axis text {
+    @apply fill-current text-xs;
+  }
+  
+  .chart-axis line {
+    @apply stroke-current;
+  }
+  
+  /* Chart Lines */
+  .chart-line {
+    stroke-width: 2;
+    fill: none;
+  }
+  
+  .chart-line.positive {
+    stroke: #22c55e;
+  }
+  
+  .chart-line.negative {
+    stroke: #ef4444;
+  }
+  
+  .chart-line.neutral {
+    stroke: #3b82f6;
+  }
+  
+  /* Chart Area Fill */
+  .chart-area-fill {
+    opacity: 0.1;
+  }
+  
+  .chart-area-fill.positive {
+    fill: #22c55e;
+  }
+  
+  .chart-area-fill.negative {
+    fill: #ef4444;
+  }
+  
+  .chart-area-fill.neutral {
+    fill: #3b82f6;
+  }
+  
+  /* Active Dot */
+  .chart-active-dot {
+    @apply stroke-2;
+    stroke: #1f2937;
+  }
+  
+  .chart-active-dot.positive {
+    fill: #22c55e;
+  }
+  
+  .chart-active-dot.negative {
+    fill: #ef4444;
+  }
+  
+  .chart-active-dot.neutral {
+    fill: #3b82f6;
+  }
+  
+  /* Chart Skeleton */
+  .chart-skeleton {
+    @apply animate-pulse;
+  }
+  
+  .chart-skeleton-header {
+    @apply flex justify-between items-center mb-4;
+  }
+  
+  .chart-skeleton-title {
+    @apply h-6 bg-dark-700 rounded w-32;
+  }
+  
+  .chart-skeleton-controls {
+    @apply h-4 bg-dark-700 rounded w-16;
+  }
+  
+  .chart-skeleton-area {
+    @apply h-64 bg-dark-700 rounded;
+  }
+  
+  .chart-skeleton-footer {
+    @apply flex justify-between mt-4;
+  }
+  
+  .chart-skeleton-label {
+    @apply h-3 bg-dark-700 rounded w-12;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .chart-header {
+      @apply flex-col items-start space-y-4;
+    }
+    
+    .chart-title {
+      @apply text-lg;
+    }
+    
+    .timeframe-selector {
+      @apply w-full justify-center;
+    }
+    
+    .chart-tooltip {
+      @apply p-2;
+    }
+    
+    .chart-tooltip-price {
+      @apply text-base;
+    }
+  }
+  
+  /* Dark theme specific adjustments */
+  .recharts-default-tooltip {
+    @apply bg-dark-800 border border-dark-700 rounded-lg shadow-lg;
+  }
+  
+  .recharts-tooltip-wrapper {
+    @apply outline-none;
+  }
+  
+  .recharts-cartesian-grid-horizontal line,
+  .recharts-cartesian-grid-vertical line {
+    @apply stroke-dark-700;
+  }
+  
+  .recharts-xAxis .recharts-cartesian-axis-tick-value,
+  .recharts-yAxis .recharts-cartesian-axis-tick-value {
+    @apply fill-gray-500;
+  }
+  
+  /* Animations */
+  @keyframes chart-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .chart-animate-in {
+    animation: chart-fade-in 0.5s ease-out;
+  }

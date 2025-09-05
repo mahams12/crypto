@@ -1,0 +1,141 @@
+/* PredictionDetail.css - Add this to your CSS files */
+
+.article-content {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #d1d5db; /* gray-300 */
+  }
+  
+  .article-content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+  
+  .article-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    border-bottom: 2px solid #374151; /* gray-700 */
+    padding-bottom: 0.5rem;
+  }
+  
+  .article-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #f3f4f6; /* gray-100 */
+  }
+  
+  .article-content p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+  
+  .article-content ul, .article-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+  }
+  
+  .article-content li {
+    margin-bottom: 0.5rem;
+    list-style-type: disc;
+  }
+  
+  .article-content ol li {
+    list-style-type: decimal;
+  }
+  
+  .article-content strong {
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .article-content em {
+    font-style: italic;
+    color: #9ca3af; /* gray-400 */
+  }
+  
+  .article-content a {
+    color: #3b82f6; /* blue-500 */
+    text-decoration: underline;
+    transition: color 0.2s ease;
+  }
+  
+  .article-content a:hover {
+    color: #60a5fa; /* blue-400 */
+  }
+  
+  .article-content blockquote {
+    border-left: 4px solid #3b82f6; /* blue-500 */
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #9ca3af; /* gray-400 */
+    background-color: #1f2937; /* gray-800 */
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .article-content code {
+    background-color: #374151; /* gray-700 */
+    color: #f3f4f6; /* gray-100 */
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+    font-size: 0.9em;
+  }
+  
+  .article-content pre {
+    background-color: #1f2937; /* gray-800 */
+    color: #f3f4f6; /* gray-100 */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+  
+  .article-content pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+  
+  .article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .article-content hr {
+    border: none;
+    height: 1px;
+    background-color: #374151; /* gray-700 */
+    margin: 2rem 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .article-content {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    
+    .article-content h1 {
+      font-size: 1.75rem;
+    }
+    
+    .article-content h2 {
+      font-size: 1.375rem;
+    }
+    
+    .article-content h3 {
+      font-size: 1.125rem;
+    }
+  }
