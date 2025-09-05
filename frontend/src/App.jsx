@@ -15,8 +15,9 @@ import Terms from "./pages/Terms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Home from './pages/Home/Home';
 import Markets from './pages/Markets/Markets';
-import MarketDetail from './pages/Markets/MarketDetail'; // Added this import
+import MarketDetail from './pages/Markets/MarketDetail';
 import News from './pages/News/News';
+import NewsDetail from './pages/NewsDetail'; // Add NewsDetail import
 import CoinDetails from './pages/CoinDetails/CoinDetails';
 import Opinion from './pages/Opinion/Opinion';
 import OpinionDetail from './pages/Opinion/OpinionDetail';
@@ -104,7 +105,7 @@ function App() {
                       } 
                     />
                     
-                    {/* News Routes */}
+                    {/* News Routes - Fixed Order */}
                     <Route 
                       path="/news" 
                       element={
@@ -135,18 +136,19 @@ function App() {
                         </motion.div>
                       } 
                     />
+                    {/* News Detail Route - FIXED */}
                     <Route 
-                      path="/news/:slug" 
+                      path="/news/:id" 
                       element={
                         <motion.div
-                          key="news-article"
+                          key="news-detail"
                           variants={pageVariants}
                           initial="initial"
                           animate="animate"
                           exit="exit"
                           transition={pageTransition}
                         >
-                          <News />
+                          <NewsDetail />
                         </motion.div>
                       } 
                     />
@@ -244,21 +246,6 @@ function App() {
                           transition={pageTransition}
                         >
                           <MarketDetail />
-                        </motion.div>
-                      } 
-                    />
-                    <Route 
-                      path="/markets/:section" 
-                      element={
-                        <motion.div
-                          key="markets-section"
-                          variants={pageVariants}
-                          initial="initial"
-                          animate="animate"
-                          exit="exit"
-                          transition={pageTransition}
-                        >
-                          <Markets />
                         </motion.div>
                       } 
                     />
@@ -376,36 +363,36 @@ function App() {
                     
                     {/* Company Pages */}
                     <Route
-  path="/terms"
-  element={
-    <motion.div
-      key="terms"
-      variants={pageVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={pageTransition}
-    >
-      <Terms />
-    </motion.div>
-  }
-/>
+                      path="/terms"
+                      element={
+                        <motion.div
+                          key="terms"
+                          variants={pageVariants}
+                          initial="initial"
+                          animate="animate"
+                          exit="exit"
+                          transition={pageTransition}
+                        >
+                          <Terms />
+                        </motion.div>
+                      }
+                    />
 
                     <Route 
-  path="/privacy-policy" 
-  element={
-    <motion.div
-      key="privacy-policy"
-      variants={pageVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={pageTransition}
-    >
-      <PrivacyPolicy />
-    </motion.div>
-  } 
-/>
+                      path="/privacy-policy" 
+                      element={
+                        <motion.div
+                          key="privacy-policy"
+                          variants={pageVariants}
+                          initial="initial"
+                          animate="animate"
+                          exit="exit"
+                          transition={pageTransition}
+                        >
+                          <PrivacyPolicy />
+                        </motion.div>
+                      } 
+                    />
 
                     <Route 
                       path="/about" 
@@ -509,16 +496,14 @@ function App() {
                       </ul>
                     </div>
                     <div>
-                    <h3 className="font-semibold mb-4 text-white">Company</h3>
-<ul className="space-y-2 text-sm text-gray-400">
-  <li><a href="/about" className="hover:text-blue-400 transition-colors">About</a></li>
-  <li><a href="/contact" className="hover:text-blue-400 transition-colors">Contact</a></li>
-  <li><a href="/privacy-policy" className="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
-  <li><a href="/terms" className="hover:text-blue-400 transition-colors">Terms</a></li>
-</ul>
-
-</div>
-
+                      <h3 className="font-semibold mb-4 text-white">Company</h3>
+                      <ul className="space-y-2 text-sm text-gray-400">
+                        <li><a href="/about" className="hover:text-blue-400 transition-colors">About</a></li>
+                        <li><a href="/contact" className="hover:text-blue-400 transition-colors">Contact</a></li>
+                        <li><a href="/privacy-policy" className="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="/terms" className="hover:text-blue-400 transition-colors">Terms</a></li>
+                      </ul>
+                    </div>
                   </div>
                   
                   <div className="mt-8 pt-8 border-t border-dark-800">
